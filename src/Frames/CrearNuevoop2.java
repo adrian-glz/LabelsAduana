@@ -263,7 +263,7 @@ public class CrearNuevoop2 extends javax.swing.JFrame {
                 btnlimpiar1ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnlimpiar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 40, 50, 40));
+        jPanel1.add(btnlimpiar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(614, 42, 40, 40));
 
         jLabel2.setText("    ");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 550, 40, -1));

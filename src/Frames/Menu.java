@@ -32,9 +32,9 @@ public class Menu extends javax.swing.JFrame {
         btnhelp = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        Generar = new javax.swing.JToggleButton();
         Modificar = new javax.swing.JToggleButton();
         Imprimir = new javax.swing.JToggleButton();
-        Generar = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Bienvenido - Sounds");
@@ -62,25 +62,7 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(494, 454, 120, 20));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        Modificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/edit.png"))); // NOI18N
-        Modificar.setText("Modificar Label");
-        Modificar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModificarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Modificar);
-
-        Imprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/imprimir.png"))); // NOI18N
-        Imprimir.setText("Imprimir label");
-        Imprimir.setPreferredSize(new java.awt.Dimension(137, 41));
-        Imprimir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ImprimirActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Imprimir);
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Generar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/label.png"))); // NOI18N
         Generar.setText("Generar Label");
@@ -90,9 +72,28 @@ public class Menu extends javax.swing.JFrame {
                 GenerarActionPerformed(evt);
             }
         });
-        jPanel1.add(Generar);
+        jPanel1.add(Generar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 197, 62));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 150, 150));
+        Modificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/edit.png"))); // NOI18N
+        Modificar.setText("Modificar Label");
+        Modificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModificarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 197, 62));
+
+        Imprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/imprimir.png"))); // NOI18N
+        Imprimir.setText("Imprimir label");
+        Imprimir.setPreferredSize(new java.awt.Dimension(137, 41));
+        Imprimir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ImprimirActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Imprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 197, 70));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 220, 230));
 
         pack();
         setLocationRelativeTo(null);

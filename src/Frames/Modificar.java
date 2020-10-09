@@ -265,7 +265,7 @@ public class Modificar extends javax.swing.JFrame {
                 btnlimpiar1ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnlimpiar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 60, 50, 40));
+        getContentPane().add(btnlimpiar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(595, 56, 40, 40));
 
         pack();
         setLocationRelativeTo(null);
