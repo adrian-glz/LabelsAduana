@@ -3,7 +3,6 @@
 	<property name="ireport.zoom" value="4.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
-        
 	<parameter name="codigo" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
@@ -11,7 +10,7 @@
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<queryString>
-		<![CDATA[SELECT codigo,codigofisico,descripcion,marca,hecho,TensionAlimentacion, TensionAlimentacion2,ConsumoPotencia,Frecuencia,Frecuencia2
+		<![CDATA[SELECT codigo,codigofisico,descripcion,marca,hecho,descripcion1, descripcion2,descripcion3 
 FROM NomEtiqueta 
 WHERE codigo=$P{codigo} or codigofisico=$P{codigo}]]>
 	</queryString>
@@ -20,74 +19,79 @@ WHERE codigo=$P{codigo} or codigofisico=$P{codigo}]]>
 	<field name="descripcion" class="java.lang.String"/>
 	<field name="marca" class="java.lang.String"/>
 	<field name="hecho" class="java.lang.String"/>
-	<field name="TensionAlimentacion" class="java.lang.String"/>
-	<field name="TensionAlimentacion2" class="java.lang.String"/>
-	<field name="ConsumoPotencia" class="java.lang.String"/>
-	<field name="Frecuencia" class="java.lang.String"/>
-	<field name="Frecuencia2" class="java.lang.String"/>
+	<field name="descripcion1" class="java.lang.String"/>
+	<field name="descripcion2" class="java.lang.String"/>
+	<field name="descripcion3" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
 		<band height="72" splitType="Stretch">
 			<textField>
-				<reportElement x="10" y="8" width="121" height="9" uuid="ee496960-464f-40b7-8623-34e0ae155e34"/>
+				<reportElement x="10" y="6" width="121" height="9" uuid="ee496960-464f-40b7-8623-34e0ae155e34"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{descripcion}.trim()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="10" y="15" width="121" height="9" uuid="03576ef4-b0b6-48d9-80d1-87795818d5db"/>
+				<reportElement x="10" y="14" width="121" height="9" uuid="03576ef4-b0b6-48d9-80d1-87795818d5db"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="5" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Marca "+$F{marca}.trim()+", Modelo "+$F{codigofisico}.trim()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="10" y="22" width="121" height="6" uuid="0bc9daf3-4dbc-4573-bdf8-a8e6b938da83"/>
+				<reportElement x="10" y="21" width="121" height="6" uuid="0bc9daf3-4dbc-4573-bdf8-a8e6b938da83"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="4" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Hecho en "+$F{hecho}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="10" y="28" width="121" height="6" uuid="12746a84-fcd2-4439-b111-b11e675327db"/>
+				<reportElement x="10" y="27" width="121" height="6" uuid="12746a84-fcd2-4439-b111-b11e675327db"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="4" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA["Especificaciones: "+"Tension de alimentacion "+$F{TensionAlimentacion}.trim()+","+$F{TensionAlimentacion2}.trim()]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{descripcion1}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="10" y="34" width="121" height="6" uuid="3170f4bd-dd8e-49f2-8a2e-2fadabbb2b55"/>
+				<reportElement x="10" y="33" width="121" height="6" uuid="3170f4bd-dd8e-49f2-8a2e-2fadabbb2b55"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="4" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA["Consumo de potencia: "+$F{ConsumoPotencia}.trim()+", Frecuencia: "+$F{Frecuencia}.trim()+"-"+$F{Frecuencia}.trim()]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{descripcion2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="39" width="121" height="6" uuid="c379591d-44ce-4904-a67f-ef32209e6d30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="4" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcion3}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="10" y="40" width="121" height="6" uuid="e9d6b4c9-f890-44bc-ae7b-81aa2c13725a"/>
+				<reportElement x="10" y="44" width="121" height="6" uuid="e9d6b4c9-f890-44bc-ae7b-81aa2c13725a"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="3" isBold="true" isUnderline="false"/>
 				</textElement>
 				<text><![CDATA[Para garantias e instructivos consulte la Pagina Web: www.sounds.mx]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="46" width="121" height="6" uuid="0ec1080c-830c-4c4e-8a65-f6762330781b"/>
+				<reportElement x="10" y="50" width="121" height="6" uuid="0ec1080c-830c-4c4e-8a65-f6762330781b"/>
 				<textElement textAlignment="Center">
-					<font size="4" isBold="true"/>
+					<font size="3" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Importador: Casa de Musica de Luxe, S.A de C.V.]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="10" y="52" width="121" height="7" uuid="ed4914b3-82a7-41b2-b7ac-1a6ce58d6d81"/>
+				<reportElement x="10" y="56" width="121" height="7" uuid="ed4914b3-82a7-41b2-b7ac-1a6ce58d6d81"/>
 				<textElement textAlignment="Center">
 					<font size="3" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Av.Paseo Triunfo de la Republica 4450 local 21-23, Col. Partido Escobedo"]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="10" y="57" width="121" height="7" uuid="a037ec81-bf1a-4e0f-9d75-626133ea897b"/>
+				<reportElement x="10" y="61" width="121" height="7" uuid="a037ec81-bf1a-4e0f-9d75-626133ea897b"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="3" isBold="true"/>
 				</textElement>

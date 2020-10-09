@@ -85,12 +85,12 @@ public class ImprimirLabel extends javax.swing.JFrame {
                 txt_codigoKeyPressed(evt);
             }
         });
-        jPanel1.add(txt_codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 290, 37));
+        jPanel1.add(txt_codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 290, 37));
 
         lblcodigo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lblcodigo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblcodigo.setText("Codigo/fisico:");
-        jPanel1.add(lblcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 110, 40));
+        jPanel1.add(lblcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 110, 40));
 
         jLabel1.setFont(new java.awt.Font("Britannic Bold", 0, 23)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 51, 153));
@@ -106,7 +106,7 @@ public class ImprimirLabel extends javax.swing.JFrame {
                 btnactualizarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnactualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 380, 60));
+        jPanel1.add(btnactualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 290, 60));
 
         btnvolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/volver.png"))); // NOI18N
         btnvolver.setContentAreaFilled(false);
@@ -118,7 +118,7 @@ public class ImprimirLabel extends javax.swing.JFrame {
         });
         jPanel1.add(btnvolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 560, 280));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 560, 200));
 
         pack();
         setLocationRelativeTo(null);
@@ -129,13 +129,13 @@ public class ImprimirLabel extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_codigoActionPerformed
 
     private void btnactualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnactualizarActionPerformed
-        existecodigo();
+        existecodigover();
     }//GEN-LAST:event_btnactualizarActionPerformed
 
     private void txt_codigoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_codigoKeyPressed
 
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            existecodigo();
+            existecodigover();
         }
     }//GEN-LAST:event_txt_codigoKeyPressed
 
@@ -195,7 +195,7 @@ public class ImprimirLabel extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
  
-    public void ExisteCodigo() {
+    public void ExisteCodigover() {
         try {
             Class.forName("net.sourceforge.jtds.jdbc.Driver");
             java.sql.Connection conexion = DriverManager.getConnection("jdbc:jtds:sqlserver://192.168.1.80:56704", "usounds", "madljda");
@@ -230,7 +230,7 @@ public class ImprimirLabel extends javax.swing.JFrame {
  
    
       
-      public void Imprimircodigo(){
+      public void Imprimircodigover(){
     
          //  System.out.println(System.getProperty("user.name")); 
               String user = System.getProperty("user.name");
@@ -268,7 +268,7 @@ public class ImprimirLabel extends javax.swing.JFrame {
       
       
       
-         public void existecodigo() {
+         public void existecodigover() {
 
          try {
              Class.forName("net.sourceforge.jtds.jdbc.Driver");
@@ -286,7 +286,7 @@ public class ImprimirLabel extends javax.swing.JFrame {
                      }
                           JOptionPane.showMessageDialog(null, "El codigo " + txt_codigo.getText().trim() + " no esta registrado, puedes ir a la opcion de modificar o eliminarlo", "Alerta", JOptionPane.WARNING_MESSAGE);
              
-                 } else {   Imprimircodigo();
+                 } else {   Imprimircodigover();
                  }
              } catch (SQLException ex) {
                  JOptionPane.showMessageDialog(rootPane, ex.getMessage());

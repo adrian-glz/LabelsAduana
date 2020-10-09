@@ -27,38 +27,21 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Generar = new javax.swing.JToggleButton();
-        Imprimir = new javax.swing.JToggleButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         btnhelp = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         Modificar = new javax.swing.JToggleButton();
+        Imprimir = new javax.swing.JToggleButton();
+        Generar = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Bienvenido - Sounds");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Generar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/label.png"))); // NOI18N
-        Generar.setText("Generar Label");
-        Generar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GenerarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Generar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 197, 62));
-
-        Imprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/imprimir.png"))); // NOI18N
-        Imprimir.setText("Imprimir label");
-        Imprimir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ImprimirActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Imprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 197, 70));
-
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/fondo.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 86, -1, 298));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 84, 360, 300));
 
         jLabel2.setFont(new java.awt.Font("Britannic Bold", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 153, 51));
@@ -78,6 +61,8 @@ public class Menu extends javax.swing.JFrame {
         jLabel3.setText("2019-2020 Version 1.0");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(494, 454, 120, 20));
 
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         Modificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/edit.png"))); // NOI18N
         Modificar.setText("Modificar Label");
         Modificar.addActionListener(new java.awt.event.ActionListener() {
@@ -85,7 +70,29 @@ public class Menu extends javax.swing.JFrame {
                 ModificarActionPerformed(evt);
             }
         });
-        getContentPane().add(Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 197, 62));
+        jPanel1.add(Modificar);
+
+        Imprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/imprimir.png"))); // NOI18N
+        Imprimir.setText("Imprimir label");
+        Imprimir.setPreferredSize(new java.awt.Dimension(137, 41));
+        Imprimir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ImprimirActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Imprimir);
+
+        Generar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/label.png"))); // NOI18N
+        Generar.setText("Generar Label");
+        Generar.setPreferredSize(new java.awt.Dimension(137, 41));
+        Generar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GenerarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Generar);
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 150, 150));
 
         pack();
         setLocationRelativeTo(null);
@@ -96,7 +103,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_btnhelpActionPerformed
 
     private void GenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GenerarActionPerformed
-        CrearNuevo m = new CrearNuevo();
+        CrearNuevoop2 m = new CrearNuevoop2();
         m.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_GenerarActionPerformed
@@ -156,5 +163,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

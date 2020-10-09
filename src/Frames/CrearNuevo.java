@@ -52,22 +52,15 @@ public class CrearNuevo extends javax.swing.JFrame {
         txt_hecho = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         btnguardar = new javax.swing.JButton();
-        cbtension2 = new javax.swing.JComboBox();
         btnhelp = new javax.swing.JButton();
-        cbfrecuencia = new javax.swing.JComboBox();
         lblDescripcion4 = new javax.swing.JLabel();
         btnbuscarcodigo = new javax.swing.JButton();
         btnlimpiar = new javax.swing.JButton();
         lblDescripcion5 = new javax.swing.JLabel();
         txt_codigofisico = new javax.swing.JTextField();
-        cbpotencia = new javax.swing.JComboBox();
-        txt_potencia = new javax.swing.JTextField();
-        cbfrecuencia2 = new javax.swing.JComboBox();
-        txt_frecuencia = new javax.swing.JTextField();
-        txt_frecuencia2 = new javax.swing.JTextField();
-        txt_tension = new javax.swing.JTextField();
-        cbtension = new javax.swing.JComboBox();
-        txt_tension2 = new javax.swing.JTextField();
+        txt_descripcion1 = new javax.swing.JTextField();
+        txt_descripcion2 = new javax.swing.JTextField();
+        txt_descripcion3 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         btninformacion3 = new javax.swing.JButton();
         btninformacion1 = new javax.swing.JButton();
@@ -84,8 +77,8 @@ public class CrearNuevo extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblDescripcion3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblDescripcion3.setText("Tension:");
-        jPanel1.add(lblDescripcion3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 330, -1, 37));
+        lblDescripcion3.setText("descripcion 3:");
+        jPanel1.add(lblDescripcion3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, 100, 37));
 
         txt_codigo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txt_codigo.addActionListener(new java.awt.event.ActionListener() {
@@ -117,8 +110,8 @@ public class CrearNuevo extends javax.swing.JFrame {
         jPanel1.add(lblDescripcion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 70, 37));
 
         lblDescripcion2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblDescripcion2.setText("Consumo de Potencia:");
-        jPanel1.add(lblDescripcion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 140, 37));
+        lblDescripcion2.setText("descripcion 1:");
+        jPanel1.add(lblDescripcion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 100, 37));
 
         txt_descripcion.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel1.add(txt_descripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 290, 37));
@@ -143,16 +136,12 @@ public class CrearNuevo extends javax.swing.JFrame {
         btnguardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/save.png"))); // NOI18N
         btnguardar.setText("Guardar");
         btnguardar.setBorderPainted(false);
-        btnguardar.setContentAreaFilled(false);
         btnguardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnguardarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnguardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 410, 320, 40));
-
-        cbtension2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "mA" }));
-        jPanel1.add(cbtension2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, 60, 35));
+        jPanel1.add(btnguardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 390, 320, 40));
 
         btnhelp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/HELP2.png"))); // NOI18N
         btnhelp.setContentAreaFilled(false);
@@ -162,14 +151,11 @@ public class CrearNuevo extends javax.swing.JFrame {
                 btnhelpActionPerformed(evt);
             }
         });
-        jPanel1.add(btnhelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 450, 50, 50));
-
-        cbfrecuencia.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Hz", "MHz", "KHz", "GHz" }));
-        jPanel1.add(cbfrecuencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 290, 47, 37));
+        jPanel1.add(btnhelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 450, 80, 50));
 
         lblDescripcion4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblDescripcion4.setText("Frecuencia:");
-        jPanel1.add(lblDescripcion4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 70, 37));
+        lblDescripcion4.setText("descripcion 2:");
+        jPanel1.add(lblDescripcion4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 100, 37));
 
         btnbuscarcodigo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/search.png"))); // NOI18N
         btnbuscarcodigo.setContentAreaFilled(false);
@@ -198,29 +184,14 @@ public class CrearNuevo extends javax.swing.JFrame {
         txt_codigofisico.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel1.add(txt_codigofisico, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 290, 37));
 
-        cbpotencia.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "W", "kW" }));
-        jPanel1.add(cbpotencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 250, 50, 35));
+        txt_descripcion1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel1.add(txt_descripcion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, 290, 37));
 
-        txt_potencia.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel1.add(txt_potencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, 238, 37));
+        txt_descripcion2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel1.add(txt_descripcion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, 290, 37));
 
-        cbfrecuencia2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "KHz", "MHz", "Hz" }));
-        jPanel1.add(cbfrecuencia2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 290, 50, 35));
-
-        txt_frecuencia.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel1.add(txt_frecuencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, 87, 37));
-
-        txt_frecuencia2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel1.add(txt_frecuencia2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 98, 37));
-
-        txt_tension.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel1.add(txt_tension, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, 87, 37));
-
-        cbtension.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "V" }));
-        jPanel1.add(cbtension, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 330, 47, 37));
-
-        txt_tension2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel1.add(txt_tension2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 330, 90, 37));
+        txt_descripcion3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel1.add(txt_descripcion3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, 290, 37));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 18, 23));
@@ -267,7 +238,7 @@ public class CrearNuevo extends javax.swing.JFrame {
         });
         jPanel1.add(btnvolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 5, 60, 40));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 560, 500));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 580, 500));
 
         jLabel3.setText("  ");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 510, 30, -1));
@@ -286,11 +257,11 @@ public class CrearNuevo extends javax.swing.JFrame {
                 || txt_marca.equals(" ")
                 || txt_hecho.equals(" ")
                 || txt_descripcion.equals(" ")
-                || txt_potencia.equals(" ")
-                || txt_frecuencia.equals(" ")
-                || txt_frecuencia2.equals(" ")
-                || txt_tension.equals(" ")
-                || txt_tension2.equals(" ")
+                || txt_descripcion1.equals(" ")
+                || txt_descripcion2.equals(" ")
+           
+                || txt_descripcion3.equals(" ")  
+              
                ) {
 
             JOptionPane.showMessageDialog(rootPane, "Falta un campo de llenar");
@@ -417,11 +388,6 @@ public class CrearNuevo extends javax.swing.JFrame {
     private javax.swing.JButton btninformacion3;
     private javax.swing.JButton btnlimpiar;
     private javax.swing.JButton btnvolver;
-    private javax.swing.JComboBox cbfrecuencia;
-    private javax.swing.JComboBox cbfrecuencia2;
-    private javax.swing.JComboBox cbpotencia;
-    private javax.swing.JComboBox cbtension;
-    private javax.swing.JComboBox cbtension2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -437,13 +403,11 @@ public class CrearNuevo extends javax.swing.JFrame {
     private javax.swing.JTextField txt_codigo;
     private javax.swing.JTextField txt_codigofisico;
     private javax.swing.JTextField txt_descripcion;
-    private javax.swing.JTextField txt_frecuencia;
-    private javax.swing.JTextField txt_frecuencia2;
+    private javax.swing.JTextField txt_descripcion1;
+    private javax.swing.JTextField txt_descripcion2;
+    private javax.swing.JTextField txt_descripcion3;
     private javax.swing.JTextField txt_hecho;
     private javax.swing.JTextField txt_marca;
-    private javax.swing.JTextField txt_potencia;
-    private javax.swing.JTextField txt_tension;
-    private javax.swing.JTextField txt_tension2;
     // End of variables declaration//GEN-END:variables
 
     public void RevisarCamposVacios() {
@@ -538,11 +502,11 @@ public class CrearNuevo extends javax.swing.JFrame {
         txt_codigo.setText("");
         txt_marca.setText("");
         txt_hecho.setText("");
-        txt_tension.setText("");
-        txt_tension2.setText("");
-        txt_frecuencia.setText("");
-        txt_frecuencia2.setText("");
-        txt_potencia.setText("");
+        txt_descripcion3.setText("");
+      
+        txt_descripcion2.setText("");
+      
+        txt_descripcion1.setText("");
         txt_codigo.setEnabled(true);
         txt_codigo.setEditable(true);
         btnguardar.setEnabled(false);
@@ -595,21 +559,17 @@ public class CrearNuevo extends javax.swing.JFrame {
      
      public void grabarcodigo(){
       
-       String   p =cbpotencia.getSelectedItem().toString().trim();
-       String   f =cbfrecuencia.getSelectedItem().toString().trim();
-       String   p2 =cbfrecuencia2.getSelectedItem().toString().trim();
-       String   t =cbtension.getSelectedItem().toString().trim();
-       String   t2 =cbtension2.getSelectedItem().toString().trim();
+    
         try {
             Class.forName("net.sourceforge.jtds.jdbc.Driver");
             java.sql.Connection conexion = DriverManager.getConnection("jdbc:jtds:sqlserver://192.168.1.80:56704", "usounds", "madljda");
             Statement st = conexion.createStatement();
             st.executeUpdate("USE cml;");
 
-            ps = conexion.prepareStatement("insert into  NomEtiqueta (codigo, codigofisico, descripcion, marca, hecho, TensionAlimentacion, TensionAlimentacion2, ConsumoPotencia, Frecuencia, Frecuencia2) VALUES ('" + txt_codigo.getText().trim() + "','" + txt_codigofisico.getText().trim() + "',"
+            ps = conexion.prepareStatement("insert into  NomEtiqueta (codigo, codigofisico, descripcion, marca, hecho, descripcion1, descripcion2, descripcion3) VALUES ('" + txt_codigo.getText().trim() + "','" + txt_codigofisico.getText().trim() + "',"
                     + "'" + txt_descripcion.getText().trim() + "','" + txt_marca.getText().trim() + "','" + txt_hecho.getText().trim() + "',"
-                    + "'" + txt_tension.getText().trim() +"V"+ "','" + txt_tension2.getText().trim() +"mA"+ "',"
-                    + "'" + txt_potencia.getText().trim() +"W"+ "','" + txt_frecuencia.getText().trim() +"Hz"+ "','" + txt_frecuencia2.getText().trim() +"kHz"+ "')");
+                    + "'" + txt_descripcion1.getText().trim()  + "','" + txt_descripcion2.getText().trim()  + "',"
+                    + "'" + txt_descripcion3.getText().trim()  + "','" + txt_descripcion2.getText().trim()  +   "')");
 
             int n = ps.executeUpdate();
             if (n > 0) {
