@@ -187,7 +187,7 @@ public class Modificar extends javax.swing.JFrame {
         jLabel7.setText("Importador: Casa de Musica de Luxe, S.A de C.V.");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 570, 30));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 610, 370));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 610, 370));
 
         btnactualizar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnactualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/update.png"))); // NOI18N
@@ -203,7 +203,7 @@ public class Modificar extends javax.swing.JFrame {
         lblcodigo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lblcodigo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblcodigo.setText("Codigo Sounds/Original:");
-        getContentPane().add(lblcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 150, 40));
+        getContentPane().add(lblcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 150, 40));
 
         txt_codigo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txt_codigo.setText(" ");
@@ -217,7 +217,7 @@ public class Modificar extends javax.swing.JFrame {
                 txt_codigoKeyPressed(evt);
             }
         });
-        getContentPane().add(txt_codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, 240, 37));
+        getContentPane().add(txt_codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, 240, 37));
 
         btnbuscarcodigo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/busqueda.png"))); // NOI18N
         btnbuscarcodigo.setContentAreaFilled(false);
@@ -227,7 +227,7 @@ public class Modificar extends javax.swing.JFrame {
                 btnbuscarcodigoActionPerformed(evt);
             }
         });
-        getContentPane().add(btnbuscarcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 60, 40, 35));
+        getContentPane().add(btnbuscarcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 50, 40, 35));
 
         btnlimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/CCleaner_23560.png"))); // NOI18N
         btnlimpiar.setContentAreaFilled(false);
@@ -237,12 +237,12 @@ public class Modificar extends javax.swing.JFrame {
                 btnlimpiarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnlimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 60, 40, 35));
+        getContentPane().add(btnlimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 50, 40, 35));
 
         jLabel1.setFont(new java.awt.Font("Britannic Bold", 0, 23)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 51, 153));
         jLabel1.setText("Modificar Label ");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 170, 50));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 170, 40));
 
         btnvolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/volver.png"))); // NOI18N
         btnvolver.setContentAreaFilled(false);
@@ -265,7 +265,7 @@ public class Modificar extends javax.swing.JFrame {
                 btnlimpiar1ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnlimpiar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(595, 56, 40, 40));
+        getContentPane().add(btnlimpiar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 50, 40, 40));
 
         pack();
         setLocationRelativeTo(null);

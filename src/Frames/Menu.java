@@ -29,7 +29,6 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        btnhelp = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         Generar = new javax.swing.JToggleButton();
@@ -44,19 +43,9 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 84, 360, 300));
 
         jLabel2.setFont(new java.awt.Font("Britannic Bold", 0, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 153, 51));
+        jLabel2.setForeground(new java.awt.Color(0, 51, 51));
         jLabel2.setText("Sistema de Labels  para importacion");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 410, 50));
-
-        btnhelp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/HELP2.png"))); // NOI18N
-        btnhelp.setContentAreaFilled(false);
-        btnhelp.setFocusPainted(false);
-        btnhelp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnhelpActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnhelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 400, 50, 50));
 
         jLabel3.setText("2019-2020 Version 1.0");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(494, 454, 120, 20));
@@ -98,10 +87,6 @@ public class Menu extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnhelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnhelpActionPerformed
-        //   ayudaboton();
-    }//GEN-LAST:event_btnhelpActionPerformed
 
     private void GenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GenerarActionPerformed
         CrearNuevoop2 m = new CrearNuevoop2();
@@ -160,7 +145,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JToggleButton Generar;
     private javax.swing.JToggleButton Imprimir;
     private javax.swing.JToggleButton Modificar;
-    private javax.swing.JButton btnhelp;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

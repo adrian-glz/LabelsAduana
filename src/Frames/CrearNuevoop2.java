@@ -253,7 +253,7 @@ public class CrearNuevoop2 extends javax.swing.JFrame {
                 txt_codigoKeyPressed(evt);
             }
         });
-        jPanel1.add(txt_codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 190, 30));
+        jPanel1.add(txt_codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 230, 30));
 
         btnlimpiar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/VER.png"))); // NOI18N
         btnlimpiar1.setContentAreaFilled(false);
