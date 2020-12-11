@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
  */
 public class pruebaconexion {
 
-    public String url = "jdbc:jtds:sqlserver://" + "192.168.1.80:56704/cml";
+    public String url = "jdbc:jtds:sqlserver://" + "192.168.1.80:55024/cml";
     public String user = "usounds";
     public String pass = "madljda";
 

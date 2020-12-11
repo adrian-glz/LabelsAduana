@@ -33,7 +33,7 @@ import net.sf.jasperreports.view.JasperViewer;
  *
  * @author AGONZALEZ
  */
-public class Modificar extends javax.swing.JFrame {
+public class Generico extends javax.swing.JFrame {
 
     Statement st;
     PreparedStatement ps = null;
@@ -43,7 +43,7 @@ public class Modificar extends javax.swing.JFrame {
     /**
      * Creates new form Modificar
      */
-    public Modificar() {
+    public Generico() {
         initComponents();
         txt_codigo.requestFocusInWindow();
         btnguardar.setEnabled(false);
@@ -62,9 +62,7 @@ public class Modificar extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         lblDescripcion2 = new javax.swing.JLabel();
         txt_descripcion = new javax.swing.JTextField();
-        lblMarca1 = new javax.swing.JLabel();
         txt_marca = new javax.swing.JTextField();
-        lblMarca2 = new javax.swing.JLabel();
         txt_hecho = new javax.swing.JTextField();
         lblDescripcion7 = new javax.swing.JLabel();
         txt_codigofisico = new javax.swing.JTextField();
@@ -112,10 +110,6 @@ public class Modificar extends javax.swing.JFrame {
         });
         jPanel2.add(txt_descripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, 330, 30));
 
-        lblMarca1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblMarca1.setText(", Modelo: ");
-        jPanel2.add(lblMarca1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 70, 30));
-
         txt_marca.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txt_marca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,10 +122,6 @@ public class Modificar extends javax.swing.JFrame {
             }
         });
         jPanel2.add(txt_marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 190, 30));
-
-        lblMarca2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblMarca2.setText("Marca:");
-        jPanel2.add(lblMarca2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 60, 30));
 
         txt_hecho.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txt_hecho.addActionListener(new java.awt.event.ActionListener() {
@@ -401,47 +391,21 @@ public class Modificar extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnguardarActionPerformed
 
-    private void txt_descripcion1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_descripcion1KeyTyped
-        // TODO add your handling code here:
-
-        if (txt_descripcion1.getText().length() == 40) {
-            JOptionPane.showMessageDialog(null, "Solo 40 caracteres", "Alerta", JOptionPane.WARNING_MESSAGE);
-            evt.consume();
-        }
-
-    }//GEN-LAST:event_txt_descripcion1KeyTyped
-
-    private void txt_descripcion2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_descripcion2KeyTyped
-        // TODO add your handling code here:
-          if (txt_descripcion2.getText().length() == 40) {
-            JOptionPane.showMessageDialog(null, "Solo 40 caracteres", "Alerta", JOptionPane.WARNING_MESSAGE);
-            evt.consume();
-        }
-    }//GEN-LAST:event_txt_descripcion2KeyTyped
-
-    private void txt_descripcion3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_descripcion3KeyTyped
-       if (txt_descripcion3.getText().length() == 40) {
-            JOptionPane.showMessageDialog(null, "Solo 40 caracteres", "Alerta", JOptionPane.WARNING_MESSAGE);
-            evt.consume();
-        }
-    }//GEN-LAST:event_txt_descripcion3KeyTyped
-
     private void txt_descripcionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_descripcionKeyTyped
-        if (txt_descripcion.getText().length() == 50) {
-            JOptionPane.showMessageDialog(null, "Solo 50 caracteres", "Alerta", JOptionPane.WARNING_MESSAGE);
-            evt.consume();
-        }
+        // TODO add your handling code here:
     }//GEN-LAST:event_txt_descripcionKeyTyped
 
     private void txt_marcaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_marcaKeyTyped
-        if (txt_marca.getText().length() == 30) {
+        // TODO add your handling code here:
+          if (txt_marca.getText().length() == 30) {
             JOptionPane.showMessageDialog(null, "Solo 30 caracteres", "Alerta", JOptionPane.WARNING_MESSAGE);
             evt.consume();
         }
     }//GEN-LAST:event_txt_marcaKeyTyped
 
     private void txt_codigofisicoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_codigofisicoKeyTyped
-        if (txt_codigofisico.getText().length() == 30) {
+        // TODO add your handling code here:
+          if (txt_codigofisico.getText().length() == 30) {
             JOptionPane.showMessageDialog(null, "Solo 30 caracteres", "Alerta", JOptionPane.WARNING_MESSAGE);
             evt.consume();
         }
@@ -453,6 +417,27 @@ public class Modificar extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_txt_hechoKeyTyped
+
+    private void txt_descripcion1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_descripcion1KeyTyped
+       if (txt_descripcion1.getText().length() == 40) {
+            JOptionPane.showMessageDialog(null, "Solo 40 caracteres", "Alerta", JOptionPane.WARNING_MESSAGE);
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_descripcion1KeyTyped
+
+    private void txt_descripcion2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_descripcion2KeyTyped
+       if (txt_descripcion2.getText().length() == 40) {
+            JOptionPane.showMessageDialog(null, "Solo 40 caracteres", "Alerta", JOptionPane.WARNING_MESSAGE);
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_descripcion2KeyTyped
+
+    private void txt_descripcion3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_descripcion3KeyTyped
+         if (txt_descripcion3.getText().length() == 40) {
+            JOptionPane.showMessageDialog(null, "Solo 40 caracteres", "Alerta", JOptionPane.WARNING_MESSAGE);
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_descripcion3KeyTyped
     public void existecodigover() {
 
          try {
@@ -479,7 +464,7 @@ public class Modificar extends javax.swing.JFrame {
          } catch (HeadlessException | NumberFormatException | SQLException e) {
             JOptionPane.showMessageDialog(rootPane, e.getMessage());
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Modificar.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Generico.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
  
@@ -498,7 +483,7 @@ public class Modificar extends javax.swing.JFrame {
           parametro.put("codigo", codigo);
         //  parametro.put("codigofisico", "'" +codigo+ "'");
                
-          String path = "C:\\Program Files\\LabelAduana\\src\\Plantillas/labelchico.jasper";
+          String path = "C:\\Program Files\\LabelAduana\\src\\Plantillas/labelgenerico.jasper";
        //   String path = "C:\\Users\\"+user+"\\Documents\\NetBeansProjects\\Inventario\\src\\reportes\\Dia.jasper";
           reporte = (JasperReport) JRLoader.loadObjectFromFile(path);
           JasperPrint jprint = JasperFillManager.fillReport(reporte, parametro, conn);
@@ -514,9 +499,7 @@ public class Modificar extends javax.swing.JFrame {
          Logger.getLogger(ImprimirLabel.class.getName()).log(Level.SEVERE, null, ex);
              JOptionPane.showMessageDialog(null, ">>"+ex);
             
-        }
-      
-      
+        }  
     }
     /**
      * @param args the command line arguments
@@ -535,21 +518,23 @@ public class Modificar extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Modificar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Generico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Modificar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Generico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Modificar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Generico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Modificar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Generico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Modificar().setVisible(true);
+                new Generico().setVisible(true);
             }
         });
     }
@@ -573,8 +558,6 @@ public class Modificar extends javax.swing.JFrame {
     private javax.swing.JLabel lblDescripcion7;
     private javax.swing.JLabel lblDescripcion8;
     private javax.swing.JLabel lblDescripcion9;
-    private javax.swing.JLabel lblMarca1;
-    private javax.swing.JLabel lblMarca2;
     private javax.swing.JLabel lblcodigo;
     private javax.swing.JTextField txt_codigo;
     private javax.swing.JTextField txt_codigofisico;
@@ -647,7 +630,7 @@ public class Modificar extends javax.swing.JFrame {
         } catch (HeadlessException | SQLException ex) {
             JOptionPane.showMessageDialog(rootPane, "Error en la base de datos");
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Modificar.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Generico.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -703,7 +686,7 @@ public class Modificar extends javax.swing.JFrame {
         } catch (HeadlessException | NumberFormatException | SQLException e) {
             JOptionPane.showMessageDialog(rootPane, e.getMessage());
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Modificar.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Generico.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -729,7 +712,7 @@ public class Modificar extends javax.swing.JFrame {
         } catch (HeadlessException | SQLException ex) {
             JOptionPane.showMessageDialog(rootPane, "Error en la base de datos" + ex);
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Modificar.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Generico.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -773,7 +756,7 @@ public class Modificar extends javax.swing.JFrame {
          } catch (HeadlessException | NumberFormatException | SQLException e) {
             JOptionPane.showMessageDialog(rootPane, e.getMessage());
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Modificar.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Generico.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
         public void existecodigoguardar() {
@@ -803,7 +786,7 @@ public class Modificar extends javax.swing.JFrame {
          } catch (HeadlessException | NumberFormatException | SQLException e) {
             JOptionPane.showMessageDialog(rootPane, e.getMessage());
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Modificar.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Generico.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
       
@@ -841,7 +824,7 @@ public class Modificar extends javax.swing.JFrame {
             } catch (HeadlessException | SQLException ex) {
                 JOptionPane.showMessageDialog(rootPane, "Error en la base de datos" + ex);
             } catch (ClassNotFoundException ex) {
-                Logger.getLogger(Modificar.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Generico.class.getName()).log(Level.SEVERE, null, ex);
             }
 
     }

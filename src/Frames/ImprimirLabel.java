@@ -98,7 +98,7 @@ public class ImprimirLabel extends javax.swing.JFrame {
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, 160, 50));
 
         btnactualizar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnactualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/print.png"))); // NOI18N
+        btnactualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Print_icon-icons.com_73705 (1).png"))); // NOI18N
         btnactualizar.setText("Imprimir");
         btnactualizar.setBorderPainted(false);
         btnactualizar.addActionListener(new java.awt.event.ActionListener() {
@@ -198,7 +198,7 @@ public class ImprimirLabel extends javax.swing.JFrame {
     public void ExisteCodigover() {
         try {
             Class.forName("net.sourceforge.jtds.jdbc.Driver");
-            java.sql.Connection conexion = DriverManager.getConnection("jdbc:jtds:sqlserver://192.168.1.80:56704", "usounds", "madljda");
+            java.sql.Connection conexion = DriverManager.getConnection("jdbc:jtds:sqlserver://192.168.1.80:55024", "usounds", "madljda");
             st = conexion.createStatement();
             st.executeUpdate("USE  noms");
             rs = st.executeQuery("select codigo from noms1web where codigo='" + txt_codigo.getText() + "'");
@@ -272,7 +272,7 @@ public class ImprimirLabel extends javax.swing.JFrame {
 
          try {
              Class.forName("net.sourceforge.jtds.jdbc.Driver");
-             java.sql.Connection conexion = DriverManager.getConnection("jdbc:jtds:sqlserver://192.168.1.80:56704", "usounds", "madljda");
+             java.sql.Connection conexion = DriverManager.getConnection("jdbc:jtds:sqlserver://192.168.1.80:55024", "usounds", "madljda");
              st = conexion.createStatement();
              st.executeUpdate("USE CML");
              rs = st.executeQuery("select codigo from  NomEtiqueta where codigo='" + txt_codigo.getText() + "'");
@@ -286,7 +286,8 @@ public class ImprimirLabel extends javax.swing.JFrame {
                      }
                           JOptionPane.showMessageDialog(null, "El codigo " + txt_codigo.getText().trim() + " no esta registrado, puedes ir a la opcion de modificar o eliminarlo", "Alerta", JOptionPane.WARNING_MESSAGE);
              
-                 } else {   Imprimircodigover();
+                 } else {  
+                     Imprimircodigover();
                  }
              } catch (SQLException ex) {
                  JOptionPane.showMessageDialog(rootPane, ex.getMessage());
@@ -294,7 +295,7 @@ public class ImprimirLabel extends javax.swing.JFrame {
          } catch (HeadlessException | NumberFormatException | SQLException e) {
             JOptionPane.showMessageDialog(rootPane, e.getMessage());
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(CrearNuevo.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ImprimirLabel.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

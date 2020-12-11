@@ -32,8 +32,8 @@ public class Menu extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         Generar = new javax.swing.JToggleButton();
-        Modificar = new javax.swing.JToggleButton();
         Imprimir = new javax.swing.JToggleButton();
+        Generico = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Bienvenido - Sounds");
@@ -61,18 +61,9 @@ public class Menu extends javax.swing.JFrame {
                 GenerarActionPerformed(evt);
             }
         });
-        jPanel1.add(Generar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 197, 62));
+        jPanel1.add(Generar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 220, 62));
 
-        Modificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/edit.png"))); // NOI18N
-        Modificar.setText("Modificar Label");
-        Modificar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModificarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 197, 62));
-
-        Imprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/imprimir.png"))); // NOI18N
+        Imprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Print_icon-icons.com_73705 (1).png"))); // NOI18N
         Imprimir.setText("Imprimir label");
         Imprimir.setPreferredSize(new java.awt.Dimension(137, 41));
         Imprimir.addActionListener(new java.awt.event.ActionListener() {
@@ -80,31 +71,41 @@ public class Menu extends javax.swing.JFrame {
                 ImprimirActionPerformed(evt);
             }
         });
-        jPanel1.add(Imprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 197, 70));
+        jPanel1.add(Imprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 220, 70));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 220, 230));
+        Generico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/label.png"))); // NOI18N
+        Generico.setText("Generar Label generico");
+        Generico.setPreferredSize(new java.awt.Dimension(137, 41));
+        Generico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GenericoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Generico, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 220, 62));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 240, 260));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void GenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GenerarActionPerformed
-        CrearNuevoop2 m = new CrearNuevoop2();
+        Modificar m = new Modificar();
         m.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_GenerarActionPerformed
 
-    private void ModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarActionPerformed
-          Modificar m = new Modificar();
-        m.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_ModificarActionPerformed
-
     private void ImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ImprimirActionPerformed
- ImprimirLabel m = new ImprimirLabel();
+        ImprimirLabel m = new ImprimirLabel();
         m.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_ImprimirActionPerformed
+
+    private void GenericoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GenericoActionPerformed
+        Generico m = new Generico();
+        m.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_GenericoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -117,7 +118,7 @@ public class Menu extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -143,8 +144,8 @@ public class Menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton Generar;
+    private javax.swing.JToggleButton Generico;
     private javax.swing.JToggleButton Imprimir;
-    private javax.swing.JToggleButton Modificar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

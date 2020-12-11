@@ -97,7 +97,7 @@
               <Font name="Tahoma" size="14" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Recursos/print.png"/>
+              <Image iconType="3" name="/Recursos/Print_icon-icons.com_73705 (1).png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Imprimir"/>
             <Property name="borderPainted" type="boolean" value="false"/>
