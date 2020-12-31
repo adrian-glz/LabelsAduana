@@ -228,7 +228,7 @@ public class Generico extends javax.swing.JFrame {
         lblcodigo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lblcodigo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblcodigo.setText("Codigo Sounds/Original:");
-        getContentPane().add(lblcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 160, 40));
+        getContentPane().add(lblcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 170, 40));
 
         txt_codigo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txt_codigo.setText(" ");
