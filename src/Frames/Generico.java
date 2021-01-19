@@ -157,6 +157,13 @@ public class Generico extends javax.swing.JFrame {
         jPanel2.add(txt_codigofisico, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, 190, 30));
 
         txt_descripcion1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txt_descripcion1.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                txt_descripcion1InputMethodTextChanged(evt);
+            }
+        });
         txt_descripcion1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txt_descripcion1KeyTyped(evt);
@@ -419,10 +426,20 @@ public class Generico extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_hechoKeyTyped
 
     private void txt_descripcion1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_descripcion1KeyTyped
-       if (txt_descripcion1.getText().length() == 40) {
+    String limite= txt_descripcion1.getText().substring(0, 40);
+    double C= limite.length();
+        
+        if (C >= 40) {
             JOptionPane.showMessageDialog(null, "Solo 40 caracteres", "Alerta", JOptionPane.WARNING_MESSAGE);
             evt.consume();
         }
+        
+     /*   double C= txt_descripcion1.getText().length();
+        
+        if (C == 40) {
+            JOptionPane.showMessageDialog(null, "Solo 40 caracteres", "Alerta", JOptionPane.WARNING_MESSAGE);
+            evt.consume();
+        }*/
     }//GEN-LAST:event_txt_descripcion1KeyTyped
 
     private void txt_descripcion2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_descripcion2KeyTyped
@@ -438,6 +455,18 @@ public class Generico extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_txt_descripcion3KeyTyped
+
+    private void txt_descripcion1InputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_txt_descripcion1InputMethodTextChanged
+        // TODO add your handling code here:
+         String limite= txt_descripcion1.getText().substring(0, 40);
+    double C= limite.length();
+        
+        if (C >= 40) {
+            JOptionPane.showMessageDialog(null, "Solo 40 caracteres", "Alerta", JOptionPane.WARNING_MESSAGE);
+            evt.consume();
+        }
+        
+    }//GEN-LAST:event_txt_descripcion1InputMethodTextChanged
     public void existecodigover() {
 
          try {
