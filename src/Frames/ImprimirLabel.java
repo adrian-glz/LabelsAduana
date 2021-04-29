@@ -27,6 +27,7 @@ import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperPrintManager;
 import net.sf.jasperreports.engine.JasperReport;
 import static net.sf.jasperreports.engine.export.JRGraphics2DExporterParameter.ZOOM_RATIO;
 import net.sf.jasperreports.engine.util.JRLoader;
@@ -249,11 +250,8 @@ public class ImprimirLabel extends javax.swing.JFrame {
        //   String path = "C:\\Users\\"+user+"\\Documents\\NetBeansProjects\\Inventario\\src\\reportes\\Dia.jasper";
           reporte = (JasperReport) JRLoader.loadObjectFromFile(path);
           JasperPrint jprint = JasperFillManager.fillReport(reporte, parametro, conn);
-          JasperViewer view = new JasperViewer(jprint, false);
-          view.setTitle("LABEL IMPORTACION CODIGO: "+codigo);
-          view.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-          view.setZoomRatio(new Float(4));
-          view.setVisible(true); 
+            JasperPrintManager.printReport(jprint,true);
+          
          
       
         //this.dispose();
