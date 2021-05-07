@@ -5,6 +5,11 @@
  */
 package Frames;
 
+import static Frames.Generico.txt_codigo;
+import buscador.CodigoPOJO;
+import buscador.PersonaJDBC;
+import com.mxrck.autocompleter.AutoCompleterCallback;
+import com.mxrck.autocompleter.TextAutoCompleter;
 import java.awt.HeadlessException;
 import java.awt.event.KeyEvent;
 import java.sql.Connection;
@@ -36,7 +41,8 @@ public class Modificar extends javax.swing.JFrame {
     Statement st;
     PreparedStatement ps = null;
     ResultSet rs;
-      String guardadito="";
+    String guardadito = "";
+    TextAutoCompleter textAutoCompleter;
 
     /**
      * Creates new form Modificar
@@ -45,8 +51,16 @@ public class Modificar extends javax.swing.JFrame {
         initComponents();
         txt_codigo.requestFocusInWindow();
         btnguardar.setEnabled(false);
+        textAutoCompleter = new TextAutoCompleter(txt_codigo, new AutoCompleterCallback() {
+            @Override
+            public void callback(Object o) {
+                Object a = textAutoCompleter.findItem(o);
+                CodigoPOJO personaPOJO = (CodigoPOJO) a;
+            }
+        });
+        PersonaJDBC.cargarCompleter(textAutoCompleter);
     }
- 
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -82,7 +96,7 @@ public class Modificar extends javax.swing.JFrame {
         btnguardar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Sounds - Generar Nuevo Label");
+        setTitle("Sounds - Label ");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -229,7 +243,6 @@ public class Modificar extends javax.swing.JFrame {
         getContentPane().add(lblcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 160, 40));
 
         txt_codigo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txt_codigo.setText(" ");
         txt_codigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_codigoActionPerformed(evt);
@@ -270,7 +283,7 @@ public class Modificar extends javax.swing.JFrame {
                 btnvolverActionPerformed(evt);
             }
         });
-        getContentPane().add(btnvolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 50, 50));
+        getContentPane().add(btnvolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 50, 40));
 
         jLabel2.setText("      ");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 520, 50, 30));
@@ -347,14 +360,9 @@ public class Modificar extends javax.swing.JFrame {
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
           
             buscarcodigo();
-            existecodigo2();
-             
+           
         }  
     }//GEN-LAST:event_txt_codigoKeyPressed
-
-    private void txt_codigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_codigoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_codigoActionPerformed
 
     private void btnlimpiar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlimpiar1ActionPerformed
         // TODO add your handling code here:
@@ -430,6 +438,10 @@ public class Modificar extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_txt_hechoKeyTyped
+
+    private void txt_codigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_codigoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_codigoActionPerformed
     public void existecodigover() {
 
          try {
@@ -565,28 +577,27 @@ public class Modificar extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     public void RevisarCamposVacios() {
-        if (txt_codigo.equals(" ")|| txt_descripcion.equals(" ")
-                || txt_marca.equals(" ")|| txt_hecho.equals(" ")) 
-        {
-            JOptionPane.showMessageDialog(rootPane, "Faltan datos, si aparecen datos en blanco, comunicate con el comprador responsable");    
+        if (txt_codigo.equals(" ") || txt_descripcion.equals(" ")
+                || txt_marca.equals(" ") || txt_hecho.equals(" ")) {
+            JOptionPane.showMessageDialog(rootPane, "Faltan datos, si aparecen datos en blanco, comunicate con el comprador responsable");
         } else {
-       //   Revisar si existe el codigo();
+            //   Revisar si existe el codigo();
         }
-     }
- 
+    }
+
     public void buscarcodigo() {
-         guardadito=txt_codigo.getText().trim();
+        guardadito = txt_codigo.getText();
         String codigo = "";
         String codigof = "";
         String descripcion = "";
         String marca = "";
         String hecho = "";
-        String importador = "";  
+        String importador = "";
         String exportador = "";
         String descripcion1 = "";
         String descripcion2 = "";
         String descripcion3 = "";
-    
+
         try {
             Class.forName("net.sourceforge.jtds.jdbc.Driver");
             java.sql.Connection conexion = DriverManager.getConnection("jdbc:jtds:sqlserver://192.168.1.80:55024", "usounds", "madljda");
@@ -594,7 +605,7 @@ public class Modificar extends javax.swing.JFrame {
             st.executeUpdate("use cml;");
 
             rs = st.executeQuery("select codigo,codigofisico,descripcion,marca"
-                    + ",hecho,descripcion1,descripcion2,descripcion3 from nometiqueta where codigo='" + txt_codigo.getText().trim() + "' or codigofisico= '" +txt_codigo.getText().trim()+ "'");
+                    + ",hecho,descripcion1,descripcion2,descripcion3 from nometiqueta where codigo='" + txt_codigo.getText().trim() + "' or codigofisico= '" + txt_codigo.getText().trim() + "'");
 
             while (rs.next()) {
 
@@ -603,24 +614,25 @@ public class Modificar extends javax.swing.JFrame {
                 descripcion = rs.getString(3).trim();
                 marca = rs.getString(4).trim();
                 hecho = rs.getString(5).trim();
-                descripcion1  = rs.getString(6).trim();
-                descripcion2  = rs.getString(7).trim();
-                descripcion3  = rs.getString(8).trim();
-                  
-                
+                descripcion1 = rs.getString(6).trim();
+                descripcion2 = rs.getString(7).trim();
+                descripcion3 = rs.getString(8).trim();
+
+                txt_marca.setText(marca);
+                txt_descripcion.setText(descripcion);
+                txt_hecho.setText(hecho);
+                txt_codigofisico.setText(codigof);
+                txt_descripcion1.setText(descripcion1);
+                txt_descripcion2.setText(descripcion2);
+                txt_descripcion3.setText(descripcion3);
+                txt_codigo.setText(codigo);
+                txt_codigo.setEditable(false);
+                txt_codigo.setEnabled(false);
+                btnactualizar.setEnabled(true);
+                existecodigo2();
             }
-     
-            txt_marca.setText(marca);
-            txt_descripcion.setText(descripcion);
-            txt_hecho.setText(hecho);
-            txt_codigofisico.setText(codigof);
-            txt_descripcion1.setText(descripcion1);
-            txt_descripcion2.setText(descripcion2);
-            txt_descripcion3.setText(descripcion3);
-            txt_codigo.setText(codigo);
-            txt_codigo.setEditable(false);
-            txt_codigo.setEnabled(false);
-            btnactualizar.setEnabled(true);
+
+
 
         } catch (HeadlessException | SQLException ex) {
             JOptionPane.showMessageDialog(rootPane, "Error en la base de datos");

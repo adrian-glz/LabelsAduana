@@ -119,7 +119,7 @@ public class ImprimirLabel extends javax.swing.JFrame {
         });
         jPanel1.add(btnvolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 560, 200));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 200));
 
         pack();
         setLocationRelativeTo(null);
