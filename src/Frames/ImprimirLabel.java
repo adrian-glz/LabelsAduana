@@ -47,8 +47,11 @@ public class ImprimirLabel extends javax.swing.JFrame {
      * Creates new form CrearNuevo
      */
     public ImprimirLabel() {
-        initComponents();txt_codigo.requestFocusInWindow();
-       // btnguardar.setEnabled(false);
+        initComponents();
+        txt_codigo.requestFocusInWindow();
+        setIconImage(new ImageIcon(getClass().getResource("/recursos/logochico.png")).getImage());
+
+        // btnguardar.setEnabled(false);
     }
 
     /**

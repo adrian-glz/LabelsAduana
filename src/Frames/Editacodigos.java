@@ -31,11 +31,12 @@ public class Editacodigos extends javax.swing.JFrame {
     private PreparedStatement ps;
 
     public Editacodigos() {
+        setIconImage(new ImageIcon(getClass().getResource("/recursos/logochico.png")).getImage());
         initComponents();
-       llenartable();
+        llenartable();
         imagendebarra();
     }
-     DefaultTableModel dmm;
+    DefaultTableModel dmm;
 
     private void filtro(String consulta, JTable jtableBuscar) {
         dmm = (DefaultTableModel) jtabla.getModel();
@@ -46,11 +47,11 @@ public class Editacodigos extends javax.swing.JFrame {
 
     public void update() {
 
-       try {
-                Class.forName("net.sourceforge.jtds.jdbc.Driver");
+        try {
+            Class.forName("net.sourceforge.jtds.jdbc.Driver");
                 java.sql.Connection conexion = DriverManager.getConnection("jdbc:jtds:sqlserver://192.168.1.80:55024", "usounds", "madljda");
                 Statement st = conexion.createStatement();
-                st.executeUpdate("USE  cml");
+                st.executeUpdate("use cml");
                 String codigo = jtabla.getValueAt(jtabla.getSelectedRow(), 0).toString();
                 String codigofisico = jtabla.getValueAt(jtabla.getSelectedRow(), 1).toString();
                 String descripcion = jtabla.getValueAt(jtabla.getSelectedRow(), 2).toString();
@@ -67,7 +68,7 @@ public class Editacodigos extends javax.swing.JFrame {
                 int n = preparedStatement.executeUpdate();
 
                 if (n > 0) {
-                    JOptionPane.showMessageDialog(null, "¡Los datos han sido guardados exitósamente!" + updateTableSQL);
+                    JOptionPane.showMessageDialog(null, "¡Los datos han sido guardados exitósamente!" );
                 } else {
 
                 }
@@ -133,7 +134,7 @@ public class Editacodigos extends javax.swing.JFrame {
         jtabla.setModel(md); //igualamos en modelo en jplatos
         JTableHeader th;
         th = jtabla.getTableHeader();
-        th.setFont(new java.awt.Font("tahoma", 0, 14));//seteamos fuente en el header
+        th.setFont(new java.awt.Font("tahoma", 0, 11));//seteamos fuente en el header
         //Centrar el encabezado de la tabla
         TableCellRenderer rendererFromHeader = jtabla.getTableHeader().getDefaultRenderer();//
         JLabel headerLabel = (JLabel) rendererFromHeader;
@@ -233,11 +234,11 @@ public class Editacodigos extends javax.swing.JFrame {
                 txt_codigoKeyReleased(evt);
             }
         });
-        getContentPane().add(txt_codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 250, 40));
+        getContentPane().add(txt_codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 250, 40));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel1.setText("Filtrar:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 60, 40));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 60, 40));
 
         jLabel2.setText("   ");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 440, -1, -1));
@@ -273,7 +274,7 @@ public class Editacodigos extends javax.swing.JFrame {
         });
         jPanel1.add(btneliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 130, 60));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 70, 150, 240));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 60, 150, 240));
 
         jLabel3.setText("  ");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(994, 150, 30, -1));
@@ -297,7 +298,7 @@ public class Editacodigos extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jtabla);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 910, 370));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 910, 370));
 
         pack();
         setLocationRelativeTo(null);

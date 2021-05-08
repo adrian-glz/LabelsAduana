@@ -45,6 +45,8 @@ public class Generico extends javax.swing.JFrame {
      */
     public Generico() {
         initComponents();
+              setIconImage(new ImageIcon(getClass().getResource("/recursos/logochico.png")).getImage());
+   
         txt_codigo.requestFocusInWindow();
         btnguardar.setEnabled(false);
 

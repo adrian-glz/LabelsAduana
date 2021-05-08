@@ -5,6 +5,8 @@
  */
 package Frames;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author AGONZALEZ
@@ -16,6 +18,7 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
+         setIconImage(new ImageIcon(getClass().getResource("/recursos/logochico.png")).getImage());
     }
 
    
@@ -126,7 +129,9 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_GenericoActionPerformed
 
     private void btnvercodigosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvercodigosActionPerformed
-        // TODO add your handling code here:
+      Editacodigos e= new Editacodigos();
+      e.setVisible(true);
+      this.dispose();
     }//GEN-LAST:event_btnvercodigosActionPerformed
 
     private void btnsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirActionPerformed
