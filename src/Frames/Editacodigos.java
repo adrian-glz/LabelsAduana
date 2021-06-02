@@ -75,9 +75,9 @@ public class Editacodigos extends javax.swing.JFrame {
                 st.close();
                 llenartable();
             } catch (SQLException ex) {
-            Logger.getLogger(Editacodigos.class.getName()).log(Level.SEVERE, null, ex);
+          //  Logger.getLogger(Editacodigos.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Editacodigos.class.getName()).log(Level.SEVERE, null, ex);
+       //     Logger.getLogger(Editacodigos.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -343,6 +343,7 @@ public class Editacodigos extends javax.swing.JFrame {
     private void jtablaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtablaKeyReleased
        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             update();
+              filtro(txt_codigo.getText().toUpperCase(), jtabla);
             }
     }//GEN-LAST:event_jtablaKeyReleased
 
