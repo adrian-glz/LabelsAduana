@@ -145,9 +145,6 @@
               <Image iconType="3" name="/Recursos/ver2.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Ver Codigos"/>
-            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[137, 41]"/>
-            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnvercodigosActionPerformed"/>
